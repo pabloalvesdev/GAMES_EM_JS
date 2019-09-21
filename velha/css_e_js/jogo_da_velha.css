@@ -1,0 +1,35 @@
+#container-jogo-da-velha{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: -50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#cont-tabuleiro{
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.d-r{
+    border-bottom: 6px solid white; 
+    border-right: 6px solid white;
+    width: 100px;
+    height: 100px; 
+}
+.d{
+    width: 100px;
+    height: 100px;
+    border-bottom: 6px solid white;
+}
+.r{
+    width: 100px;
+    height: 100px;
+    border-right: 6px solid white;
+}
+.x-e-bolinha{
+    width: 100px;
+    height: 100px;
+}

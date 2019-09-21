@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./memoria/css_e_js/jogo_da_memoria.css">
+    <link rel="stylesheet" href="./velha/css_e_js/jogo_da_velha.css">
+    <link rel="stylesheet" href="./forca/css_e_js/jogo_da_forca.css">
+    <link rel="stylesheet" href="./main/css_e_js/main.css">
+    <link rel="icon" href="./main/imagens/icone.png">
+    <title>Jogos | Escolha</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cont-img-main"><img src="./main/imagens/memoria.png" class="img-escolha" id="img-jogo-da-memoria"></div>
+        <div class="cont-img-main"><img src="./main/imagens/velha.jpg" class="img-escolha" id="img-jogo-da-velha"></div>
+        <div class="cont-img-main"><img src="./main/imagens/forca.png" class="img-escolha" id="img-jogo-da-forca"></div>
+    </div>
+    <!--Jogo da memória-->
+    <div id="container-jogo-da-memoria">
+        <h1 class="titulo-game">Jogo da memória</h1>
+        <div>
+            <button class = "botoes" id="voltar">Menu Principal</button>
+            <button class = "botoes" id="btn">Zerar</button>
+        </div>
+        <ul id="cont-pai">
+            <li class="cont-img"><img id="1"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="2"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="3"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="4"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="5"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="6"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="7"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="8"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="9"src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="10" src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="11" src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+            <li class="cont-img"><img id="12" src="./memoria/imagens/capa.png" class="elemento-imagem"></li>
+        </ul>
+    </div>
+
+    <!--Jogo da Velha-->
+    <div id="container-jogo-da-velha">
+        <h1 class = "titulo-game">Jogo da Velha</h1>
+        <div>
+            <button class = "botoes" id="voltar-menu">Menu Principal</button>
+            <button class = "botoes" id="btn-zerar">Zerar</button>
+        </div>
+        </br>
+        </br>
+        </br>
+        <ul id="cont-tabuleiro">
+                <li class="d-r"><img class="x-e-bolinha" id="13" src="./velha/imagens/null.png"></li>
+                <li class="d-r"><img class="x-e-bolinha" id="14" src="./velha/imagens/null.png"></li>
+                <li class="d"><img class="x-e-bolinha" id="15" src="./velha/imagens/null.png"></li>
+                <li class="d-r"><img class="x-e-bolinha" id="16" src="./velha/imagens/null.png"></li>
+                <li class="d-r"><img class="x-e-bolinha" id="17" src="./velha/imagens/null.png"></li>
+                <li class="d"><img class="x-e-bolinha" id="18" src="./velha/imagens/null.png"></li>
+                <li class="r"><img class="x-e-bolinha" id="19" src="./velha/imagens/null.png"></li>
+                <li class="r"><img class="x-e-bolinha" id="20" src="./velha/imagens/null.png"></li>
+                <li><img class="x-e-bolinha" id="21"src="./velha/imagens/null.png"></li>
+            </ul>
+    </div>
+
+    <!--Jogo da Forca-->
+    <form id="formulario">
+        <div id="container-formulario-jogo-da-forca">
+            <h1 class = "titulo-game">Definir Regras</h1>
+            <button class = "botoes" id="voltar-menu-formulario">Menu Principal</button>
+            <label for="field-palavra" class="field-label">Palavra-Chave</label>
+            <input id="field-palavra" class="field" type="text">
+            <label for="field-dica" class="field-label">Dica</label>
+            <input id="field-dica" class="field" type="text">
+            <input id="btn-avancar" type="submit" class="botoes" value="Avançar">
+        </div>
+    </form>
+    <div id="container-jogo-da-forca">
+        <h1 class = "titulo-game">Jogo da Forca</h1>
+        <div>
+            <button class = "botoes" id="voltar-menu-forca">Menu Principal</button>
+            <button class = "botoes" id="btn-regras">Alterar as regras</button>
+        </div>
+        <div class="container-do-jogo">
+            <div class="container-forca-e-boneco">
+                <img src="./forca/imagens/forca.png" style="width: 300px; height: 600px;">
+                <div class="boneco-forca">
+                    <img src="./forca/imagens/head.png" id="cabeca">
+                    <div class="tronco">
+                        <img src="./forca/imagens/bd.png" id="braco-direito">
+                        <img src="./forca/imagens/be.png" id="braco-esquerdo">
+                        <img src="./forca/imagens/pd.png" id="perna-direita">
+                        <img src="./forca/imagens/pe.png" id="perna-esquerda">
+                    </div>
+                </div>
+            </div>
+            <div id="espaco-letras" class="espaco-letras">
+                <div>
+                    <label for="dica" style="font-family: sans-serif; color: white; font-size: 30px; border-bottom: 3px solid white;">Dica:</label>
+                    <p id="dica"></p>
+                </div>
+                <div id="esp-let"></div>
+            </div>
+            <div class="alfabeto">
+                <!--Aqui ficarão todas as letras do alfabeto que serão selecionadas com AddEventListener-->
+                <ul id="alfabeto-l" style="list-style: none; display: grid; grid-template-columns: 70px 70px 70px 70px;">
+                    <li class="letra" id="A">A</li>
+                    <li class="letra" id="B">B</li>
+                    <li class="letra" id="C">C</li>
+                    <li class="letra" id="D">D</li>
+                    <li class="letra" id="E">E</li>
+                    <li class="letra" id="F">F</li>
+                    <li class="letra" id="G">G</li>
+                    <li class="letra" id="H">H</li>
+                    <li class="letra" id="I">I</li>
+                    <li class="letra" id="J">J</li>
+                    <li class="letra" id="K">K</li>
+                    <li class="letra" id="L">L</li>
+                    <li class="letra" id="M">M</li>
+                    <li class="letra" id="N">N</li>
+                    <li class="letra" id="O">O</li>
+                    <li class="letra" id="P">P</li>
+                    <li class="letra" id="Q">Q</li>
+                    <li class="letra" id="R">R</li>
+                    <li class="letra" id="S">S</li>
+                    <li class="letra" id="T">T</li>
+                    <li class="letra" id="U">U</li>
+                    <li class="letra" id="V">V</li>
+                    <li class="letra" id="W">W</li>
+                    <li class="letra" id="X">X</li>
+                    <li class="letra" id="Y">Y</li>
+                    <li class="letra" id="Z">Z</li>
+                </ul>
+            </div>  
+        </div>
+    </div>
+    <div class="modais" id="modal-win">
+        <img style="width: 150px; height: 150px;" src="./forca/imagens/certo.png" alt="">
+        <h2>Meus parabéns</h2>
+        <div class="bot">
+            <button class = "botoes" id="voltar-menu-forca-lose">Menu Principal</button>
+            <button class = "botoes" id="btn-regras-lose">Jogar outra vez</button>
+        </div>
+    </div>
+    <div class="modais" id="modal-lose">
+        <img style="width: 150px; height: 150px;" src="./forca/imagens/x.png" alt="">
+        <h2>Que pena, tente outra vez...</h2>
+        <div class="bot">
+            <button class = "botoes" id="voltar-menu-forca-lose">Menu Principal</button>
+            <button class = "botoes" id="btn-regras-lose">Jogar outra vez</button>
+        </div>
+    </div>
+    <div class="cobrir">
+    </div>
+    <script src="./main/css_e_js/jquery.js"></script>
+    <script src="./velha/css_e_js/game.js"></script>
+    <script src="./velha/css_e_js/validando.js"></script>
+    <script src="./memoria/css_e_js/distro.js"></script>
+    <script src="./memoria/css_e_js/logica.js"></script>  
+    <script src="./forca/css_e_js/prep.js"></script>   
+    <script src="./forca/css_e_js/resp.js"></script>   
+    <script src="./forca/css_e_js/val.js"></script>   
+</body>
+</html>

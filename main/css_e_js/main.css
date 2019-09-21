@@ -1,0 +1,27 @@
+.container{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.img-escolha{
+    width: 150px;
+    height: 150px;
+    transition: 0.2s;
+}
+.img-escolha:hover{
+    width: 200px;
+    height: 200px;
+    transition: 0.2s;
+}
+.cont-img-main{
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
