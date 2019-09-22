@@ -1,5 +1,9 @@
 $(document).ready(function(){
     const m = document.getElementById('formulario');
+    const jogo_da_memoria = $('#container-jogo-da-memoria');
+    const jogo_da_velha = $('#container-jogo-da-velha');
+    const jogo_da_forca = $('#container-jogo-da-forca');
+    const menu_principal_win = $('#voltar-menu-forca-win');
     const cabeca = $('#cabeca');
     const be = $('#braco-esquerdo');    
     const bd = $('#braco-direito');
@@ -11,7 +15,7 @@ $(document).ready(function(){
     const cobrir = $('.cobrir');
     var numero_de_erros = [];
     var numero_de_acertos = []; 
-    var procurar;
+    var procurar, palavra_passe, dica;
     m.addEventListener('submit', function(e){palavra_passe = field_palavra_passe.value; dica = field_dica.value; e.preventDefault();});
     m.addEventListener('submit', function(){
         for(var y = 30; y < ids_paragrafos.length + 30; y++){
@@ -25,6 +29,30 @@ $(document).ready(function(){
     bd.hide();
     pe.hide();
     pd.hide();
+//MODELO A SEGUIR PARA OS OUTROS BOTOES....
+    menu_principal_win.click(function(){
+        jogo_da_memoria.hide();
+        jogo_da_velha.hide();
+        jogo_da_forca.hide();
+        cabeca.hide();
+        be.hide();
+        bd.hide();
+        pe.hide();
+        pd.hide();
+        $('.container').fadeIn();
+        cobrir.css('position', 'absolute');
+        cobrir.css('top', '-50%');
+        cobrir.css('left', '-70%');
+        cobrir.css('z-index', '-45');
+        cobrir.hide();
+        modal_win.hide();
+        apagarAlf();
+        apagarP();
+        numero_de_acertos = numero_de_acertos.slice(0,0);
+        numero_de_erros = numero_de_erros.slice(0,0);
+        field_dica.value = '';
+        field_palavra_passe.value = '';
+    });
     //seta as partes do boneco caso o cara tenha errado a letra...
     function erro(){
         if (numero_de_erros.length == 1) {
@@ -50,6 +78,7 @@ $(document).ready(function(){
         cobrir.css('position', 'fixed');
         cobrir.css('top', '0px');
         cobrir.css('left', '0px');
+        cobrir.fadeIn();
     }
     //chamando o modal quando o jogador perde...
     function perdeu(){

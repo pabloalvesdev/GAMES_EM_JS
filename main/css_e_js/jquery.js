@@ -27,6 +27,7 @@ $(document).ready(function(){
         $('.container').hide();
         formulario.fadeIn();
         formulario.css('top', '50%');
+        formulario.show();
     });
     //Adicionando evento para voltar ao menu principal...
     $('#voltar').click(function(){
