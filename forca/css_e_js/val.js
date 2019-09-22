@@ -10,7 +10,7 @@ $(document).ready(function(){
     const modal_lose = $('#modal-lose');
     const cobrir = $('.cobrir');
     var numero_de_erros = [];
-    var numero_de_acertos = [];
+    var numero_de_acertos = []; 
     var procurar;
     m.addEventListener('submit', function(e){palavra_passe = field_palavra_passe.value; dica = field_dica.value; e.preventDefault();});
     m.addEventListener('submit', function(){
@@ -39,6 +39,7 @@ $(document).ready(function(){
             pe.fadeIn();
         }
     }
+    //chamando o modal quando o jogador vence...
     function venceu(){
         modal_win.css('z-index', '500000000');  
         modal_win.css('left', '50%');     
@@ -50,6 +51,7 @@ $(document).ready(function(){
         cobrir.css('top', '0px');
         cobrir.css('left', '0px');
     }
+    //chamando o modal quando o jogador perde...
     function perdeu(){
         modal_lose.css('z-index', '5000000'); 
         modal_lose.css('left', '50%');      
